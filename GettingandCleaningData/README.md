@@ -53,18 +53,18 @@ You will find the new data in "./data/newUCIHARdataset.txt"
 
 ##How does it work?
 
-The script is divided in the five steps required and filled with documentary.
+The script is divided in the five steps required and filled with commentary.
 
 During STEP 1 it reads all the necessary data text files,loads them into data frames, and combines them using cbind and rbind functions.
 
-During STEP 2 it renames the columns of the dataset using the names contained in features.txt and two extra labels "activity" and "subject" not contained in the file. This is assigned as the column names of our dataset using the function colnames. Later, it subsets all variables whose names contain the words "mean()" or "std()" into a new dataset and then removes those which include "Freq" in the variable names. Finally it cbinds the new dataset with the previous "activity" and "subject" columns in the dataset.
+During STEP 2 it renames the columns of the dataset using the names contained in features.txt and two extra labels "activity" and "subject" not contained in the file. This is assigned as the column names of our dataset using the function colnames. Later, it subsets all variables whose names contain the words "mean()" or "std()" into a new data frame and then removes those which include "Freq" in the variable names as they involve the weighted mean. Finally it cbinds the new data frame with the previous "activity" and "subject" columns in the dataset.
 
-During STEP 3 it reads the "activity_labels.txt", then it creates the object which contains the code for the activities and then it rewrite the dataset activity column using the names and match function.
+During STEP 3 it reads the "activity_labels.txt" provided, then it creates the object which contains the code for the activities and then it rewrite the data frame activity column using the names and match function.
 
-During STEP 4 it uses the function gsup to replace all abbreviations in the variable names for better human readable ones and stores it in the object "varnames", then it assigns the object to the colnames of the dataset.
+During STEP 4 it uses the function gsup to replace all abbreviations in the variable names for better human readable ones and stores it in the object "varnames", then it assigns the object to the colnames of the data frame.
 
-During STEP 5, it loads the packages of "plyr" and "reshape2". Then it reshapes the dataset using the function melt.  Melt will take all the columns except the ones we single out as id variables and put them in the same column. The resulting dataset now contains a single column for the variables and the  value. After that it runs the function "ddply" from "plyr" to automatically apply a calculation (in this case the mean) to all the subsets we're interested in. And assign it to a new dataset.
-And finally it will run the function "write.table" to write our new dataset as a text file with the name "newUCIHARdataset.txt" on the following location "./data/newUCIHARdataset.txt"
+During STEP 5, it loads the packages of "plyr" and "reshape2". Then it reshapes the data frame using the function melt.  Melt will take all the columns except the ones singled out as id variables and puts them in the same column. The resulting data frame now contains a single column for the variables and the  value. After that it runs the function "ddply" from "plyr" to automatically apply a calculation (in this case the mean) to all the subsets we're interested in. And assign it to a new final dataframe.
+And finally it will run the function "write.table" to write our new data frame as a text file with the name "newUCIHARdataset.txt" on the following location "./data/newUCIHARdataset.txt"
 
 
 ##Reading the new file
