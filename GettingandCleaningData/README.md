@@ -48,7 +48,7 @@ The loading into R is included in the script.
 
 ##Run the script.
 
-Just run all the script and wait. 
+Just run all the script "run_analysis.R" and wait. 
 You will find the new data in "./data/newUCIHARdataset.txt"
 
 ##How does it work?

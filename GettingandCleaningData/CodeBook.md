@@ -97,7 +97,7 @@ The different text file tables were combined according to their dimensions. Then
 The "activity" column values were replaced from code numbers to descriptive values using the "activity_labels.txt"
 
 Then all columns names were reassigned to complete as possible variable names.
-From this data set a new independent tidy data set was created with the average of each variable for each activity and each subject.
+From this data set a new independent tidy data set was created with the average of each variable for each activity and each subject. The data frame then reduces to four columns: "ActivityLabel" "SubjectID" "Variable" "Mean".
 
 ##Variables (Features) in the new tidy data set variable column
 (Levels From melted2$variable)
