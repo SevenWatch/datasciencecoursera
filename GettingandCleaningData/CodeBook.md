@@ -171,8 +171,7 @@ From this data set a new independent tidy data set was created with the average 
 
 
 ##Units
-Clarification: I did not forget to add the units. I just have no idea what the units are. I will attempt to understand and say that all variables starting with "Time" have time units (seconds?) and "FastFourier" ones have frequency units 
-(Hz).
+The data has been normalized. This means the units have checked each other and the values don't have units.
 
 ##New file
 And finally the script writes the new dataset as a text file with the name "newUCIHARdataset.txt" on the following location "./data/newUCIHARdataset.txt"
